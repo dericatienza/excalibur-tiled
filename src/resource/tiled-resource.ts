@@ -757,6 +757,8 @@ export class TiledResource implements Loadable<any> {
             scene.add(layer.tilemap);
          }
          if (layer instanceof IsoTileLayer) {
+            layer.tiledTileLayer.x += pos.x;
+            layer.tiledTileLayer.y += pos.y;
             scene.add(layer.isometricMap);
          }
          if (layer instanceof ObjectLayer) {
